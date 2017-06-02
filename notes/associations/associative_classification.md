@@ -18,7 +18,10 @@ Rules이 표현하는 범위에 overlap을 두고 weight decaying을 함으로�
 이 논문은 매우 중요한 논문은 아니라고 판단, RIPPER나 survey paper를 찾아보기로 함. 
 
 
+## Fast effective rule induction
 
-
+[Cohen, W. W. (1995, July). Fast effective rule induction. In Proceedings of the twelfth international conference on machine learning (pp. 115-123).][RIPPER_1995]
 
 [CPAR_2003]: https://www.researchgate.net/profile/Xiaoxin_Yin/publication/2560610_CPAR_Classification_based_on_Predictive_Association_Rules/links/54341fe70cf2bf1f1f27b8a6.pdf
+
+[RIPPER_1995]: https://pdfs.semanticscholar.org/2d5f/21740caf3c834101060b7a6d505780a299dd.pdf
