@@ -40,10 +40,30 @@ RIPPER에서 multi-class의 imbalanced problems도 다루고 있는데, C1, C2, 
 
 이 논문은 Association Rules에서도 imbalance problems을 다루고, rule pruning을 통하여 해석가능한, 가벼운 classifier를 찾는다는 점에서 가치가 있다. 
 
-이후로 읽으면 좋을 논문 paths 중 하나는 (1) rules를 실제로 계산하는 Apriori, (Fill it)나 (2) Decision Tree (C4.5) -> Random Forest -> Boosting -> XG-Boosting 이다.
+이후로 읽으면 좋을 논문 paths 중 하나는 (1) rules를 실제로 계산하는 [Apriori][APRIORI_1994], [CBA][CBA_1998], [CN2][CN2_1989], [BDL][BDL_2015]나 (2) Decision Tree (C4.5) -> [Random Forest][RF_2001] -> [Gradient Boosting][GB_2001] -> [XGBoosting][XGBOOST_2016] 이다.
 
-// References
+
+
+## To be reviewed
+
+[R. Agrawal and R. Srikant. Fast algorithms for mining association rules in large databases. In VLDB, 1994.][APRIORI_1994]
+[B. Liu, W. Hsu, and Y. Ma. Integrating classification and association rule mining. In KDD, 1998.][CBA_1998]
+[P. Clark and T. Niblett. The CN2 induction algorithm. Machine Learning, 3(4):261–283, 1989.][CN2_1989]
+[B. Letham, C. Rudin, T. H. McCormick, and D. Madigan. Interpretable classifiers using rules and Bayesian analysis: Building a better stroke prediction model. Annals of Applied Statistics, 9(3):1350–1371, 2015][BDL_2015] 
+[Friedman, Jerome H. "Greedy function approximation: a gradient boosting machine." Annals of statistics (2001): 1189-1232.][GB_2001]
+[Breiman, Leo. "Random forests." Machine learning 45.1 (2001): 5-32.][RF_2001]
+[Chen, Tianqi, and Carlos Guestrin. "Xgboost: A scalable tree boosting system." Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. ACM, 2016.][XGBOOST_2016]
+<!-- References
+-->
 
 [CPAR_2003]: https://www.researchgate.net/profile/Xiaoxin_Yin/publication/2560610_CPAR_Classification_based_on_Predictive_Association_Rules/links/54341fe70cf2bf1f1f27b8a6.pdf
-
 [RIPPER_1995]: https://pdfs.semanticscholar.org/2d5f/21740caf3c834101060b7a6d505780a299dd.pdf
+[APRIORI_1994]: http://www.vldb.org/conf/1994/P487.PDF
+[CBA_1998]: https://www.aaai.org/Papers/KDD/1998/KDD98-012.pdf
+[CN2_1989]: https://link.springer.com/article/10.1007/BF00116835
+[BDL_2015]: https://arxiv.org/abs/1511.01644
+[RF_2001]: https://link.springer.com/article/10.1023%2FA%3A1010933404324?LI=true
+[GB_2001]: https://statweb.stanford.edu/~jhf/ftp/trebst.pdf
+[XGBOOST_2016]: http://dl.acm.org/citation.cfm?id=2939785
+
+
