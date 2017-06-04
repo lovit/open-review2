@@ -46,13 +46,13 @@ RIPPER에서 multi-class의 imbalanced problems도 다루고 있는데, C1, C2, 
 
 ## To be reviewed
 
-[R. Agrawal and R. Srikant. Fast algorithms for mining association rules in large databases. In VLDB, 1994.][APRIORI_1994]
-[B. Liu, W. Hsu, and Y. Ma. Integrating classification and association rule mining. In KDD, 1998.][CBA_1998]
-[P. Clark and T. Niblett. The CN2 induction algorithm. Machine Learning, 3(4):261–283, 1989.][CN2_1989]
-[B. Letham, C. Rudin, T. H. McCormick, and D. Madigan. Interpretable classifiers using rules and Bayesian analysis: Building a better stroke prediction model. Annals of Applied Statistics, 9(3):1350–1371, 2015][BDL_2015] 
-[Friedman, Jerome H. "Greedy function approximation: a gradient boosting machine." Annals of statistics (2001): 1189-1232.][GB_2001]
-[Breiman, Leo. "Random forests." Machine learning 45.1 (2001): 5-32.][RF_2001]
-[Chen, Tianqi, and Carlos Guestrin. "Xgboost: A scalable tree boosting system." Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. ACM, 2016.][XGBOOST_2016]
+1. [R. Agrawal and R. Srikant. Fast algorithms for mining association rules in large databases. In VLDB, 1994.][APRIORI_1994]
+1. [B. Liu, W. Hsu, and Y. Ma. Integrating classification and association rule mining. In KDD, 1998.][CBA_1998]
+1. [P. Clark and T. Niblett. The CN2 induction algorithm. Machine Learning, 3(4):261–283, 1989.][CN2_1989]
+1. [B. Letham, C. Rudin, T. H. McCormick, and D. Madigan. Interpretable classifiers using rules and Bayesian analysis: Building a better stroke prediction model. Annals of Applied Statistics, 9(3):1350–1371, 2015][BDL_2015] 
+1. [Friedman, Jerome H. "Greedy function approximation: a gradient boosting machine." Annals of statistics (2001): 1189-1232.][GB_2001]
+1. [Breiman, Leo. "Random forests." Machine learning 45.1 (2001): 5-32.][RF_2001]
+1. [Chen, Tianqi, and Carlos Guestrin. "Xgboost: A scalable tree boosting system." Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. ACM, 2016.][XGBOOST_2016]
 <!-- References
 -->
 
