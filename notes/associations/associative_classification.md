@@ -38,6 +38,8 @@ Pruning은 'deleting any final sequence of conditions from the rule', pruning se
 
 RIPPER에서 multi-class의 imbalanced problems도 다루고 있는데, C1, C2, ..., Ck에 대하여 minority 순으로 정렬한다. 그리고 minor class부터 Rules를 추출한다. 추출된 rules에 의하여 covered된 (Pos, Neg)는 모두 growing set에서 지우고 다음 class에 대하여 규칙을 추출한다. 이는 Ci와 관련된 rule set Ri에 의해 covered된 Cj의 데이터들이 함께 지워지더라도, Ci보다 더 큰 집합에 있는 데이터이기 때문에 다음 라운드에서 큰 정보의 손실이 없을 것이라 가정한 것이다. 즉 multi-class에서 imbalance problems을 minority class의 one-class classifier를 학습함으로써 해결하려 하였다. 
 
+Random Forest가 attributes에 대하여 샘플링을 하지만 데이터에 대해서는 sampling을 하지 않음과 비교하여, Association Rules은 rules로 잘 설명이 되는 영역에 대해서만 classifier를 만든다는 차이가 있다. Random Forest는 데이터의 샘플링을 하지 않음으로써 매우 빠르게 계산을 하는 장점을 가졌지만, 날카로운 규칙을 만드는 점을 포기했다고 생각한다. 둘은 서로 취하고 버리는게 확실히 다른 rule miner이다. 
+
 이 논문은 Association Rules에서도 imbalance problems을 다루고, rule pruning을 통하여 해석가능한, 가벼운 classifier를 찾는다는 점에서 가치가 있다. 
 
 이후로 읽으면 좋을 논문 paths 중 하나는 (1) rules를 실제로 계산하는 [Apriori][APRIORI_1994], [CBA][CBA_1998], [CN2][CN2_1989], [BDL][BDL_2015]나 (2) Decision Tree (C4.5) -> [Random Forest][RF_2001] -> [Gradient Boosting][GB_2001] -> [XGBoosting][XGBOOST_2016] 이다.
