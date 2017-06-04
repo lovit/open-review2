@@ -18,9 +18,31 @@ Rules이 표현하는 범위에 overlap을 두고 weight decaying을 함으로�
 이 논문은 매우 중요한 논문은 아니라고 판단, RIPPER나 survey paper를 찾아보기로 함. 
 
 
-## Fast effective rule induction
+## Fast effective rule induction (RIPPER)
 
 [Cohen, W. W. (1995, July). Fast effective rule induction. In Proceedings of the twelfth international conference on machine learning (pp. 115-123).][RIPPER_1995]
+
+이 논문은 association rules를 찾는 방법에 집중하기 보다는 rule pruning의 과정을 거치면서 간단한 rules를 정제하는데 더 중점을 두고 있으며, 이를 위하여 규칙을 학습하기 위한 growing set과 규칙을 정제하기 위한 pruning set을 나누고 있음. 
+
+RIPPER 알고리즘의 큰 구조는 Incremental Reduced Error Pruning (IREP)과 같기 떄문에 IREP의 구조를 이용하여 설명을 하고 있음 (아래 그림)
+
+<p align="center"><img src="./figs/ripper_irep.png" width="300"></p>
+
+IREP은 하나의 클래스 (Positive class; Pos)의 데이터에 대하여 이를 설명하는 rule 하나를 선택한 뒤, pruning 할지 말지 결정을 하고, 추가되는 rule에 의하여 covered되는 (Pos, Neg) 데이터를 모두 지운다. 그리고 남은 데이터에 대하여 새로운 rule을 찾는다. 이 점에서 association rule은 one-class classifier와 같다고 말할 수 있다. 
+
+또한 하나의 rule은 하나의 tree와 같은데, 하나의 association rule은 모든 변수를 이용하지 않는다는 측면에서 Random Forest를 구성하는 하나의 tree와 같고, 여러개의 association rule based classifier/regression은 Random Forest classifier/regression과 같다. 
+
+이런 이유에서 Decision Tree보다 Association Rules이 더 좋을 수 밖에 없는 이유는 DT의 경우에는 parents에서 사용된 Attributes를 children에서 반드시 이용해야만 한다 (상속). 이는 공간을 greedy하게 자르는 효과가 있어 각 subrules에 의하여 공간이 겹치지 않게 되는데, Association Rules는 이러한 제약조건 없이 데이터를 설명 잘하는 규칙을 찾기 때문에 설명력/판별력의 관점에서 항상 Decition Tree보다 상위호환이다. 하지만 계산비용의 관점에서 더 비싸다. 
+
+Pruning은 'deleting any final sequence of conditions from the rule', pruning set에서의 성능이 올라갈 수 있는 attribute를 지우는 과정이다. 
+
+RIPPER에서 multi-class의 imbalanced problems도 다루고 있는데, C1, C2, ..., Ck에 대하여 minority 순으로 정렬한다. 그리고 minor class부터 Rules를 추출한다. 추출된 rules에 의하여 covered된 (Pos, Neg)는 모두 growing set에서 지우고 다음 class에 대하여 규칙을 추출한다. 이는 Ci와 관련된 rule set Ri에 의해 covered된 Cj의 데이터들이 함께 지워지더라도, Ci보다 더 큰 집합에 있는 데이터이기 때문에 다음 라운드에서 큰 정보의 손실이 없을 것이라 가정한 것이다. 즉 multi-class에서 imbalance problems을 minority class의 one-class classifier를 학습함으로써 해결하려 하였다. 
+
+이 논문은 Association Rules에서도 imbalance problems을 다루고, rule pruning을 통하여 해석가능한, 가벼운 classifier를 찾는다는 점에서 가치가 있다. 
+
+이후로 읽으면 좋을 논문 paths 중 하나는 (1) rules를 실제로 계산하는 Apriori, (Fill it)나 (2) Decision Tree (C4.5) -> Random Forest -> Boosting -> XG-Boosting 이다.
+
+// References
 
 [CPAR_2003]: https://www.researchgate.net/profile/Xiaoxin_Yin/publication/2560610_CPAR_Classification_based_on_Predictive_Association_Rules/links/54341fe70cf2bf1f1f27b8a6.pdf
 
