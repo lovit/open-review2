@@ -42,7 +42,7 @@ Random Forest가 attributes에 대하여 샘플링을 하지만 데이터에 대
 
 이 논문은 Association Rules에서도 imbalance problems을 다루고, rule pruning을 통하여 해석가능한, 가벼운 classifier를 찾는다는 점에서 가치가 있다. 
 
-이후로 읽으면 좋을 논문 paths 중 하나는 (1) rules를 실제로 계산하는 [Apriori][APRIORI_1994], [CBA][CBA_1998], [CN2][CN2_1989], [BDL][BDL_2015]나 (2) Decision Tree (C4.5) -> [Random Forest][RF_2001] -> [Gradient Boosting][GB_2001] -> [XGBoosting][XGBOOST_2016] 이다.
+이후로 읽으면 좋을 논문 paths 중 하나는 (1) rules를 실제로 계산하는 [Apriori][APRIORI_1994], [CBA][CBA_1998], [CN2][CN2_1989], [BDL][BDL_2015]. [FP growth][FPGROW_2004]나 (2) Decision Tree (C4.5) -> [Random Forest][RF_2001] -> [Gradient Boosting][GB_2001] -> [XGBoosting][XGBOOST_2016] 이다.
 
 
 
@@ -67,5 +67,6 @@ Random Forest가 attributes에 대하여 샘플링을 하지만 데이터에 대
 [RF_2001]: https://link.springer.com/article/10.1023%2FA%3A1010933404324?LI=true
 [GB_2001]: https://statweb.stanford.edu/~jhf/ftp/trebst.pdf
 [XGBOOST_2016]: http://dl.acm.org/citation.cfm?id=2939785
+[FPGROW_2004]: http://mleg.cse.sc.edu/edu/csce822/uploads/Main.ReadingList/DM_FPtree.pdf
 
 
