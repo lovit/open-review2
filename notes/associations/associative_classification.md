@@ -44,6 +44,8 @@ Random Forest가 attributes에 대하여 샘플링을 하지만 데이터에 대
 
 이후로 읽으면 좋을 논문 paths 중 하나는 (1) rules를 실제로 계산하는 [Apriori][APRIORI_1994], [CBA][CBA_1998], [CN2][CN2_1989], [BDL][BDL_2015]. [FP growth][FPGROW_2004]나 (2) Decision Tree (C4.5) -> [Random Forest][RF_2001] -> [Gradient Boosting][GB_2001] -> [XGBoosting][XGBOOST_2016] 이다.
 
+FP Growth 의 경우에는 살펴볼만한 [python code][FPGROW_2004_PY]도 있다.
+
 
 
 ## To be reviewed
@@ -55,6 +57,9 @@ Random Forest가 attributes에 대하여 샘플링을 하지만 데이터에 대
 1. [Friedman, Jerome H. "Greedy function approximation: a gradient boosting machine." Annals of statistics (2001): 1189-1232.][GB_2001]
 1. [Breiman, Leo. "Random forests." Machine learning 45.1 (2001): 5-32.][RF_2001]
 1. [Chen, Tianqi, and Carlos Guestrin. "Xgboost: A scalable tree boosting system." Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. ACM, 2016.][XGBOOST_2016]
+1. [Han, J., Pei, J., & Yin, Y. (2000, May). Mining frequent patterns without candidate generation. In ACM Sigmod Record (Vol. 29, No. 2, pp. 1-12). ACM.][FPGROW_2004]
+
+
 <!-- References
 -->
 
@@ -68,5 +73,5 @@ Random Forest가 attributes에 대하여 샘플링을 하지만 데이터에 대
 [GB_2001]: https://statweb.stanford.edu/~jhf/ftp/trebst.pdf
 [XGBOOST_2016]: http://dl.acm.org/citation.cfm?id=2939785
 [FPGROW_2004]: http://mleg.cse.sc.edu/edu/csce822/uploads/Main.ReadingList/DM_FPtree.pdf
-
+[FPGROW_2004_PY]: https://github.com/enaeseth/python-fp-growth
 
